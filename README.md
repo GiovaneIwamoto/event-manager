@@ -1,4 +1,4 @@
-# Planner UOL
+# Event Manager
 
 #### **INTRODUCTION**
 
