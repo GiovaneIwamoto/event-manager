@@ -1,0 +1,346 @@
+{
+	"info": {
+		"_postman_id": "6458681b-eb88-4df1-87fd-0dc01efc9b4a",
+		"name": "Event Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25706688"
+	},
+	"item": [
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "CreateEvents",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "description",
+									"value": "Event",
+									"type": "default"
+								},
+								{
+									"key": "dateTime",
+									"value": "02/12/2023",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3333/api/v1/events",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"v1",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllEvents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/api/v1/events",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"v1",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllEventsByWeekday",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "weekDay",
+									"value": "Wednesday",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3333/api/v1/events?dayOfWeek=Sunday",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"v1",
+								"events"
+							],
+							"query": [
+								{
+									"key": "dayOfWeek",
+									"value": "Sunday"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEventById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/api/v1/events/OH1dUmsQsa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"v1",
+								"events",
+								"OH1dUmsQsa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteEventById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/api/v1/events?id=lLb3CyX4F",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"v1",
+								"events"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "lLb3CyX4F"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteEventByWeekday",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/api/v1/events?weekday=Sunday",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"v1",
+								"events"
+							],
+							"query": [
+								{
+									"key": "weekday",
+									"value": "Sunday"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstName",
+									"value": "Alex",
+									"type": "default"
+								},
+								{
+									"key": "lastName",
+									"value": "Shiva",
+									"type": "default"
+								},
+								{
+									"key": "birthDate",
+									"value": "12/29/2023",
+									"type": "default"
+								},
+								{
+									"key": "city",
+									"value": "Toronto",
+									"type": "default"
+								},
+								{
+									"key": "country",
+									"value": "Canada",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "alexshiva@email.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "default"
+								},
+								{
+									"key": "confirmPassword",
+									"value": "123456",
+									"type": "default"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3333/api/v1/users/signUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"signUp"
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "teste",
+									"disabled": true
+								},
+								{
+									"key": "lastName",
+									"value": "teste",
+									"disabled": true
+								},
+								{
+									"key": "birthDate",
+									"value": "12/05/2000",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "teste",
+									"disabled": true
+								},
+								{
+									"key": "country",
+									"value": "teste",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "teste@teste.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "teste",
+									"disabled": true
+								},
+								{
+									"key": "confirmPassword",
+									"value": "teste",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "alexshiva@email.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3333/api/v1/users/signIn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"signIn"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
