@@ -1,4 +1,4 @@
-# Event Manager
+# EVENT MANAGER
 
 #### **INTRODUCTION**
 
