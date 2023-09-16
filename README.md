@@ -146,7 +146,6 @@ All functionalities of the routes and the authentication system are documented i
 
 ### **CONCLUSION**
 
-Thank you for testing our app.
 This project provides a simple and straightforward way for managing events and user accounts. Whether you're creating a new event or logging into your account, the project has got you covered.
 
 ### **AUTHORS**
