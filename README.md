@@ -16,8 +16,8 @@ Run '$ npm install' to install all the dependencies needs.
 Run '$ npm start' to start the local server hosted at 'http://localhost:3333'
 ```
 
-> [!IMPORTANT]
-> To connect the application to the database, create a config.env file at the root of your project, if it does not already exist. In this file, set the values of two environment variables: DATABASE and DATABASE_PASSWORD. These variables should contain the database connection string and the database password, respectively. Once you have set these variables, the application will be able to access the database using the provided credentials.
+> [!TIP]
+> To connect the application to the database, create a config.env file at the root of your project, if it does not already exist. In this file, set the values of two environment variables: DATABASE and DATABASE_PASSWORD. These variables should contain the database connection string and the database password, respectively.
 
 ---
 
@@ -34,9 +34,6 @@ Run '$ npm start' to start the local server hosted at 'http://localhost:3333'
 ---
 
 ### **API ENDPOINTS**
-
-> [!NOTE]
-> The base route for all endpoints is /api/v1.
 
 | **HTTP VERB** | **ENDPOINT**                       | **ACTION**                                |
 | ------------- | ---------------------------------- | ----------------------------------------- |
@@ -55,8 +52,8 @@ Run '$ npm start' to start the local server hosted at 'http://localhost:3333'
 
 ### **JWT AUTHENTICATION**
 
-> [!IMPORTANT]
-> All authenticated routes require a valid JSON Web Token to be included in the Authorization header of the request.
+> [!NOTE]
+> All authenticated routes require a valid JSON Web Token to be included in the auth header of the request.
 
 ```ruby
 The following routes are protected by JWT authentication and require a bearer token to be included in the request header:
@@ -93,7 +90,8 @@ To filter events by weekday using the endpoint `/api/v1/events?dayOfWeek={weekda
 "Monday", "Tuesday", "Wednesday"
 ```
 
-This format is case-sensitive, so "_monday_" or "_MONDAY_" won't work. Make sure to use the correct spelling and capitalization when specifying the weekday to ensure that the filtering works properly.
+> [!CAUTION]
+> This format is case-sensitive, so "monday" or "MONDAY" won't work. Make sure to use the correct spelling and capitalization when specifying the weekday to ensure that the filtering works properly.
 
 ---
 
@@ -157,8 +155,8 @@ The following technologies were used in the development of this project:
 'Mongoose': An ODM library used for MongoDB to provide a schemabased solution to model app data.
 'MongoDB': A document-oriented NoSQL database used for storing and retrieving data.
 'Swagger': An open-source software framework used for consuming RESTful web services.
-'Dotenv': A zero-dependency module used for loading environment variables from a .env file into process.env.
-'JWT': A compact and self-contained way for securely transmitting info between parties as a JSON object.
+'Dotenv': A zero-dependency module used for loading environment variables from a env file.
+'JWT': A compact and self-contained way for securely transmitting info as a JSON object.
 'Zod': A TypeScript-first schema validation library used for defining and validating data structures.
 ```
 
