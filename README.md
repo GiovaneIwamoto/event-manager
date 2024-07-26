@@ -13,7 +13,7 @@ User-Event API that allows users to perform various operations related to events
 ```ruby
 Clone this repository 'https://github.com/GiovaneIwamoto/event-manager.git'
 Run '$ npm install' to install all the dependencies needs.
-Run '$ npm start' to start the local server hosted at 'http://localhost:3333' and the connection to the data base.
+Run '$ npm start' to start the local server hosted at 'http://localhost:3333'
 ```
 
 > [!IMPORTANT]
@@ -58,9 +58,9 @@ Run '$ npm start' to start the local server hosted at 'http://localhost:3333' an
 > [!IMPORTANT]
 > All authenticated routes require a valid JSON Web Token to be included in the Authorization header of the request.
 
+```ruby
 The following routes are protected by JWT authentication and require a bearer token to be included in the request header:
 
-```ruby
 GET /api/v1/events
 GET /api/v1/events/{id}
 GET /api/v1/events?dayOfWeek={weekday}
@@ -99,7 +99,7 @@ This format is case-sensitive, so "_monday_" or "_MONDAY_" won't work. Make sure
 
 ### **USER ACCOUNT**
 
-To create a user account, user can send a POST request to the _/signUp_ endpoint with the following information in the request url parameters:
+`SIGN UP` User can send a POST request to the _/signUp_ endpoint with the following information in the request url parameters:
 
 ```ruby
 [firstName]: This parameter should contain the user's first name as a string.
@@ -109,10 +109,10 @@ To create a user account, user can send a POST request to the _/signUp_ endpoint
 [country]: This parameter should contain the user's country of residence as a string.
 [email]: This parameter should be passed in a valid email format, such as "example@example.com".
 [password]: This parameter should contain the user's password as a string.
-[confirmPassword]: This parameter should contain a copy of the user's password as a string to confirm that the user has typed it correctly. This is typically used to prevent typos or mistakes when entering passwords.
+[confirmPassword]: This parameter should contain a copy of the user's password.
 ```
 
-To log in, user can send a POST request to the /signIn endpoint with the following information in the request body:
+`LOG IN` User can send a POST request to the _/signIn_ endpoint with the following information in the request body:
 
 ```ruby
 [email]: This parameter should be passed in a valid email format, such as "example@example.com".
@@ -151,24 +151,18 @@ http://127.0.0.1:3333/swagger/`
 The following technologies were used in the development of this project:
 
 ```ruby
-Nodejs: A JavaScript runtime built on Chromes V8 JavaScript engine that allows for server-side scripting.
-Express: A fast and minimalist web framework for Node.js used to create server applications.
-Mongoose: An Object Data Modeling (ODM) library used for MongoDB to provide a schema-based solution to model application data.
-MongoDB: A document-oriented NoSQL database used for storing and retrieving data.
-JSON Web Tokens: A compact and self-contained way for securely transmitting information between parties as a JSON object.
-Swagger: An open-source software framework used for designing, building, documenting, and consuming RESTful web services.
-Dotenv: A zero-dependency module used for loading environment variables from a .env file into process.env.
-TypeScript: A statically-typed superset of JavaScript that compiles to plain JavaScript.
-Zod: A TypeScript-first schema validation library used for defining and validating data structures.
+'TypeScript': A statically-typed superset of JavaScript that compiles to plain JavaScript.
+'Express': A fast and minimalist web framework for Node.js used to create server applications.
+'Nodejs': A JavaScript runtime built on Chromes V8 JS engine that allows for server-side scripting.
+'Mongoose': An ODM library used for MongoDB to provide a schemabased solution to model app data.
+'MongoDB': A document-oriented NoSQL database used for storing and retrieving data.
+'Swagger': An open-source software framework used for consuming RESTful web services.
+'Dotenv': A zero-dependency module used for loading environment variables from a .env file into process.env.
+'JWT': A compact and self-contained way for securely transmitting info between parties as a JSON object.
+'Zod': A TypeScript-first schema validation library used for defining and validating data structures.
 ```
 
 All functionalities of the routes and the authentication system are documented in Swagger, which can be accessed at the specif route defined above after starting the local server with npm start. The project also includes development dependencies such as `nodemon` for automatic server restarts and `ts-node` for running TypeScript files without compilation.
-
----
-
-### **CONCLUSION**
-
-This project provides a simple and straightforward way for managing events and user accounts. Whether you're creating a new event or logging into your account, the project has got you covered.
 
 ---
 
