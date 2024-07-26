@@ -53,11 +53,9 @@ Run '$ npm start' to start the local server hosted at 'http://localhost:3333'
 ### **JWT AUTHENTICATION**
 
 > [!NOTE]
-> All authenticated routes require a valid JSON Web Token to be included in the auth header of the request.
+> All authenticated routes require a valid JSON Web Token to be included in the auth header of the request. The following routes are protected by JWT authentication and require a bearer token to be included in the request header:
 
 ```ruby
-The following routes are protected by JWT authentication and require a bearer token to be included in the request header:
-
 GET /api/v1/events
 GET /api/v1/events/{id}
 GET /api/v1/events?dayOfWeek={weekday}
@@ -71,7 +69,7 @@ DELETE /api/v1/events?dayOfWeek={weekday}
 ```
 
 > [!WARNING]
-> For these routes, the user must first obtain a valid JWT by signing through the appropriate endpoint. Once authenticated, the user can use the obtained JWT to access the protected resources by including it in the Authorization header of the request with the format "Bearer <JWT>". This ensures that only authorized users can perform sensitive operations on the server.
+> For these routes, the user must first obtain a valid JWT by signing through the appropriate endpoint. Once authenticated, the user can use the obtained JWT to access the protected resources by including it in the Authorization header of the request with the format Bearer JWT. This ensures that only authorized users can perform sensitive operations on the server.
 
 ---
 
@@ -84,14 +82,14 @@ description: A brief description of the event.
 dateTime: MM/DD/YYYY format that will happen the event.
 ```
 
+> [!CAUTION]  
+> This format is case-sensitive. Make sure to use the correct spelling and capitalization when specifying the weekday to ensure that the filtering works properly.
+
 To filter events by weekday using the endpoint `/api/v1/events?dayOfWeek={weekday}`, it's important to pass the name of the day in the correct format. The weekday name should be in English and start with an **uppercase letter** for example:
 
 ```python
 "Monday", "Tuesday", "Wednesday"
 ```
-
-> [!CAUTION]
-> This format is case-sensitive, so "monday" or "MONDAY" won't work. Make sure to use the correct spelling and capitalization when specifying the weekday to ensure that the filtering works properly.
 
 ---
 
@@ -136,7 +134,7 @@ To filter events by weekday using the endpoint `/api/v1/events?dayOfWeek={weekda
 We have implemented Swagger to provide a more user-friendly interface for testing our API. You can access the Swagger UI by visiting the following url in your browser. From there, you can see a list of all available API routes, and you can interact with them by clicking on each endpoint.
 
 ```ruby
-http://127.0.0.1:3333/swagger/`
+http://127.0.0.1:3333/swagger/
 ```
 
 > [!NOTE]
@@ -148,7 +146,7 @@ http://127.0.0.1:3333/swagger/`
 
 The following technologies were used in the development of this project:
 
-```ruby
+```python
 'TypeScript': A statically-typed superset of JavaScript that compiles to plain JavaScript.
 'Express': A fast and minimalist web framework for Node.js used to create server applications.
 'Nodejs': A JavaScript runtime built on Chromes V8 JS engine that allows for server-side scripting.
@@ -156,8 +154,8 @@ The following technologies were used in the development of this project:
 'MongoDB': A document-oriented NoSQL database used for storing and retrieving data.
 'Swagger': An open-source software framework used for consuming RESTful web services.
 'Dotenv': A zero-dependency module used for loading environment variables from a env file.
-'JWT': A compact and self-contained way for securely transmitting info as a JSON object.
-'Zod': A TypeScript-first schema validation library used for defining and validating data structures.
+'JWT': A compact and self-contained way for securely transmitting info as a JSON obj.
+'Zod': A TS-first schema validation library used for defining and validating data structures.
 ```
 
 All functionalities of the routes and the authentication system are documented in Swagger, which can be accessed at the specif route defined above after starting the local server with npm start. The project also includes development dependencies such as `nodemon` for automatic server restarts and `ts-node` for running TypeScript files without compilation.
