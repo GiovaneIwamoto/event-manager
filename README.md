@@ -4,15 +4,17 @@
 
 User-Event API that allows users to perform various operations related to events and user management. The API includes routes for creating, updating, and deleting users, as well as retrieving and creating events. The PUT and DELETE operations on /users can only be performed by the same user, ensuring data privacy. Users can retrieve events either by specifying the weekday or the event ID. The API also supports user sign-up and sign-in operations to authenticate users. Please refer to the following routes for more details:
 
+[![Icons](https://skillicons.dev/icons?i=ts,nodejs,mongodb,fastapi,postman&theme=dark)](https://skillicons.dev)
+
 ---
 
 ### **INSTALLATION GUIDE**
 
-- Clone this repository [planner-api](https://github.com/GiovaneIwamoto/event-manager.git)
-
-- Run `$ npm install` to install all the dependencies needs.
-
-- Run `$ npm start` to start the local server hosted at http://localhost:3333 and the connection to the data base.
+```ruby
+Clone this repository 'https://github.com/GiovaneIwamoto/event-manager.git'
+Run '$ npm install' to install all the dependencies needs.
+Run '$ npm start' to start the local server hosted at 'http://localhost:3333' and the connection to the data base.
+```
 
 > [!IMPORTANT]
 > To connect the application to the database, create a config.env file at the root of your project, if it does not already exist. In this file, set the values of two environment variables: DATABASE and DATABASE_PASSWORD. These variables should contain the database connection string and the database password, respectively. Once you have set these variables, the application will be able to access the database using the provided credentials.
@@ -59,12 +61,11 @@ User-Event API that allows users to perform various operations related to events
 The following routes are protected by JWT authentication and require a bearer token to be included in the request header:
 
 ```ruby
-POST /api/v1/events
-
 GET /api/v1/events
 GET /api/v1/events/{id}
 GET /api/v1/events?dayOfWeek={weekday}
 
+POST /api/v1/events
 PUT  /api/v1/users/updateUser
 
 DELETE /api/v1/users/deleteUser
@@ -81,7 +82,7 @@ DELETE /api/v1/events?dayOfWeek={weekday}
 
 To create an event, user can send a POST request to the _/events_ endpoint with the following information in the request body:
 
-```json
+```ruby
 description: A brief description of the event.
 dateTime: MM/DD/YYYY format that will happen the event.
 ```
@@ -100,21 +101,21 @@ This format is case-sensitive, so "_monday_" or "_MONDAY_" won't work. Make sure
 
 To create a user account, user can send a POST request to the _/signUp_ endpoint with the following information in the request url parameters:
 
-```json
+```ruby
 [firstName]: This parameter should contain the user's first name as a string.
 [lastName]: This parameter should contain the user's last name as a string.
 [birthDate]: This parameter should contain the user's birth date in the format of MM/DD/YYYY.
 [city]: This parameter should contain the user's city of residence as a string.
 [country]: This parameter should contain the user's country of residence as a string.
-[email]: This parameter should be passed in a valid email format, such as "example@example.com". This means that the email address should include the "@" symbol and a valid domain name.
+[email]: This parameter should be passed in a valid email format, such as "example@example.com".
 [password]: This parameter should contain the user's password as a string.
 [confirmPassword]: This parameter should contain a copy of the user's password as a string to confirm that the user has typed it correctly. This is typically used to prevent typos or mistakes when entering passwords.
 ```
 
 To log in, user can send a POST request to the /signIn endpoint with the following information in the request body:
 
-```json
-[email]: This parameter should be passed in a valid email format, such as "example@example.com". This means that the email address should include the "@" symbol and a valid domain name.
+```ruby
+[email]: This parameter should be passed in a valid email format, such as "example@example.com".
 [password]: This parameter should contain the user's password as a string.
 ```
 
@@ -149,9 +150,7 @@ http://127.0.0.1:3333/swagger/`
 
 The following technologies were used in the development of this project:
 
-[![Icons](https://skillicons.dev/icons?i=ts,nodejs,mongodb,fastapi,postman&theme=dark)](https://skillicons.dev)
-
-```json
+```ruby
 Nodejs: A JavaScript runtime built on Chromes V8 JavaScript engine that allows for server-side scripting.
 Express: A fast and minimalist web framework for Node.js used to create server applications.
 Mongoose: An Object Data Modeling (ODM) library used for MongoDB to provide a schema-based solution to model application data.
