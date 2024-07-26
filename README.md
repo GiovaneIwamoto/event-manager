@@ -2,7 +2,7 @@
 
 ### **INTRODUCTION**
 
-User-Event API that allows users to perform various operations related to events and user management. The API includes routes for creating, updating, and deleting users, as well as retrieving and creating events. The PUT and DELETE operations on /users can only be performed by the same user, ensuring data privacy. Users can retrieve events either by specifying the weekday or the event ID. The API also supports user sign-up and sign-in operations to authenticate users. Please refer to the following routes for more details:
+User-Event API that allows users to perform various operations related to events and user management. The API includes routes for creating, updating, and deleting users, as well as retrieving and creating events. The PUT and DELETE operations on users can only be performed by the same user, ensuring data privacy. Users can retrieve events either by specifying the weekday or the event ID. The API also supports user sign-up and sign-in operations to authenticate users. Please refer to the following routes for more details:
 
 [![Icons](https://skillicons.dev/icons?i=ts,nodejs,mongodb,fastapi,postman&theme=dark)](https://skillicons.dev)
 
@@ -147,15 +147,15 @@ http://127.0.0.1:3333/swagger/
 The following technologies were used in the development of this project:
 
 ```python
-'TypeScript': A statically-typed superset of JavaScript that compiles to plain JavaScript.
-'Express': A fast and minimalist web framework for Node.js used to create server applications.
-'Nodejs': A JavaScript runtime built on Chromes V8 JS engine that allows for server-side scripting.
-'Mongoose': An ODM library used for MongoDB to provide a schemabased solution to model app data.
-'MongoDB': A document-oriented NoSQL database used for storing and retrieving data.
-'Swagger': An open-source software framework used for consuming RESTful web services.
-'Dotenv': A zero-dependency module used for loading environment variables from a env file.
-'JWT': A compact and self-contained way for securely transmitting info as a JSON obj.
-'Zod': A TS-first schema validation library used for defining and validating data structures.
+TypeScript: Statically-typed superset of JavaScript that compiles to plain JavaScript.
+Express: Fast and minimalist web framework for Node.js used to create server applications.
+Nodejs: JavaScript runtime built on Chromes V8 JS engine that allows for server-side scripting.
+Mongoose: ODM library used for MongoDB to provide a schemabased solution to model app data.
+MongoDB: Document-oriented NoSQL database used for storing and retrieving data.
+Swagger: Open-source software framework used for consuming RESTful web services.
+Dotenv: Zero-dependency module used for loading environment variables from a env file.
+JWT: Compact and self-contained way for securely transmitting info as a JSON obj.
+Zod: TS-first schema validation library used for defining and validating data structures.
 ```
 
 All functionalities of the routes and the authentication system are documented in Swagger, which can be accessed at the specif route defined above after starting the local server with npm start. The project also includes development dependencies such as `nodemon` for automatic server restarts and `ts-node` for running TypeScript files without compilation.
